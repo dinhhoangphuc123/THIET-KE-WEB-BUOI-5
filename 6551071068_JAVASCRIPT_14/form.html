@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin sinh viên (dạng object)</title>
+</head>
+<body>
+    <script>
+        let sv1 = {
+            Name: "Nguyễn Văn A",
+            NumberID: "6551071000",
+            Gender: "Nam",
+            display: function() {
+                document.write("<h3>Thông tin sinh viên:</h3>");
+                document.write("Họ và tên: " + this.Name + "<br>");
+                document.write("Mã số sinh viên: " + this.NumberID + "<br>");
+                document.write("Giới tính: " + this.Gender + "<br><br>");
+            }
+        };
+
+        let sv2 = {
+            Name: "Nguyễn Văn Triệu Hải",
+            NumberID: "6551071990",
+            Gender: "Nam",
+            display: function() {
+                document.write("<h3>Thông tin sinh viên:</h3>");
+                document.write("Họ và tên: " + this.Name + "<br>");
+                document.write("Mã số sinh viên: " + this.NumberID + "<br>");
+                document.write("Giới tính: " + this.Gender + "<br><br>");
+            }
+        };
+
+        sv1.display();
+        sv2.display();
+    </script>
+</body>
+</html>
