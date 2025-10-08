@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>GIAI THỪA SỐ CHO TRƯỚC  </title>
+    </head>
+    <body>
+        <script>
+             var a=parseInt(prompt("Nhap n: "));
+            function giaiThua(n){
+                if(n==0 || n==1){
+                    return 1;
+                }
+                      return Math.pow(n,1)*giaiThua(n-1);
+                }
+             var c=giaiThua(a);
+            alert("Giá trị giai thừa bằng: "+c);
+            console.log("Giá trị giai thừa bằng: "+c);
+           document.write("Giá trị giai thừa bằng: "+c);
+        </script>
+    </body>
+</html>
