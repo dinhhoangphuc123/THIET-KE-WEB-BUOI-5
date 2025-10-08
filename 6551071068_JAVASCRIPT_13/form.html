@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>SỐ NGUYÊN TÓ NHỎ HƠN SỐ CHO TRƯỚC </title>
+    </head>
+    <body>
+        <script>
+            var n=parseInt(prompt("Nhập n: "));
+           function SNT(a){
+            if(a<2){
+                return false;
+            }
+            for(var i=2;i*i<=a;i++){
+                if(a%i==0){
+                    return false;
+
+                }
+            }return true;
+           }
+           var kq=" ";
+           for(var i=2;i<n;i++){
+            if(SNT(i)){
+                   kq+= i+" ";
+            }
+           }
+           alert("Dãy sô nguyên tố là: "+kq);
+           console.log("Dãy sô nguyên tố là: "+kq);
+           document.write("Dãy sô nguyên tố là: "+kq);
+        </script>
+    </body>
+</html>
