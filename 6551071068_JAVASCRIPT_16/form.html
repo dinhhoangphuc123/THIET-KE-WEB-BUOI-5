@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đối tượng Hình Trụ</title>
+</head>
+<body>
+    <script>
+        let HinhTru = {
+            radius: 10,
+            height: 15,
+            theTich: function() {
+                return Math.PI * this.radius * this.radius * this.height;
+            },
+
+            dienTichToanPhan: function() {
+                return 2 * Math.PI * this.radius * (this.height + this.radius);
+            }
+        };
+
+        document.write("<h3>Thông tin ban đầu:</h3>");
+        document.write("Bán kính: " + HinhTru.radius + "<br>");
+        document.write("Chiều cao: " + HinhTru.height + "<br>");
+        document.write("Thể tích: " + HinhTru.theTich().toFixed(2) + "<br><br>");
+
+        HinhTru.height = 30;
+
+        document.write("<h3>Sau khi cập nhật chiều cao = 30:</h3>");
+        document.write("Bán kính: " + HinhTru.radius + "<br>");
+        document.write("Chiều cao mới: " + HinhTru.height + "<br>");
+        document.write("Diện tích toàn phần: " + HinhTru.dienTichToanPhan().toFixed(2) + "<br>");
+    </script>
+</body>
+</html>
