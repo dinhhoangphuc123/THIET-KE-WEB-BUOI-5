@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất đơn giản</title>
+</head>
+<body>
+    <script>
+        let goc = parseFloat(prompt("Nhập số tiền gốc (VND): "));
+        let laiSuat = parseFloat(prompt("Nhập lãi suất hàng năm (%): "));
+        let nam = parseInt(prompt("Nhập số năm gửi: "));
+
+        let tongTien = goc * (1 + (laiSuat / 100) * nam);
+
+        tongTien = Math.round(tongTien * 100) / 100;
+
+        document.write("<h3>Kết quả tính lãi suất:</h3>");
+        document.write("Tiền gốc: " + goc + " VND<br>");
+        document.write("Lãi suất hàng năm: " + laiSuat + "%<br>");
+        document.write("Số năm gửi: " + nam + "<br>");
+        document.write("<b>Tổng số tiền sau " + nam + " năm: " + tongTien + " VND</b>");
+    </script>
+</body>
+</html>
