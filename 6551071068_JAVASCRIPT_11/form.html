@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>DÃY SỐ ĐẢO NGƯỢC </title>
+    </head>
+    <body>
+        <script>
+            var a = prompt("Nhâp 1 dãy số nguyên: ");
+            alert("Dãy số vừa nhập là: "+a);
+
+            function daoNguoc(a){
+                var mang= a.split(" ");
+                var kq=" ";
+                for(var i= mang.length-1;i>=0;i--){
+                    kq+= mang[i]+" ";
+
+                }
+                return kq;
+
+
+            }
+            alert("Dãy số đã đảo ngược là: "+ daoNguoc(a));
+            console.log(daoNguoc(a));
+            document.write("Dãy số đảo ngược là: "+daoNguoc(a));
+        </script>
+    </body>
+</html>
