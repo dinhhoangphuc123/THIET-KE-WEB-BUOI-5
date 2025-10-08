@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>CHUYỂN ĐỔI HỆ SỐ NHỊ PHÂN SANG THẬP PHÂN</title>
+    </head>
+    <body>
+        <script>
+            var a = prompt("Nhập dãy số nhị phân: ");
+            alert("Dãy số nhị phân đã nhập vào là: " + a);
+
+            function chuyen(n) {
+                if (n.length == 1) {
+                    return parseInt(n);
+                } else {
+                    var doDai = n.length;
+                    var soDau = parseInt(n.charAt(0));
+                    return soDau * Math.pow(2, doDai - 1) + chuyen(n.substring(1));
+                }
+            }
+
+            var ketQua = chuyen(a);
+            alert("Số thập phân tương ứng là: " + ketQua);
+            console.log("Số thập phân tương ứng là: " + ketQua);
+            document.write("Số thập phân tương ứng là: " + ketQua);
+        </script>
+    </body>
+</html>
